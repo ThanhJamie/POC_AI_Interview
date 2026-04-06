@@ -17,7 +17,9 @@ def test_ws_ping_pong() -> None:
             first = ws.receive_json()
             assert first["type"] == "connection_ack"
 
-            ws.send_json({"type": "ping", "payload": {}, "timestamp": "2026-04-06T00:00:00Z"})
+            ws.send_json(
+                {"type": "ping", "payload": {}, "timestamp": "2026-04-06T00:00:00Z"}
+            )
             pong = ws.receive_json()
             assert pong["type"] == "pong"
 

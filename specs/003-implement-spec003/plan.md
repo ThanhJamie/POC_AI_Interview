@@ -6,6 +6,7 @@
 ## Summary
 
 Implement a production-safe WebSocket session layer for interview streaming on the backend with typed message envelopes, ping/pong liveness checks, per-session rate limiting, and reconnect state recovery. The delivery includes:
+
 - Typed protocol models for client/server messages.
 - A `WebSocketManager` service with Redis-backed session state and in-memory fallback.
 - A FastAPI WebSocket endpoint at `/ws/interview/{session_id}`.
@@ -20,20 +21,21 @@ Implement a production-safe WebSocket session layer for interview streaming on t
 **Target Platform**: Docker Compose local stack (Linux containers)
 **Project Type**: Backend service in modular monolith
 **Performance Goals**:
+
 - Session keepalive supports sub-second ping/pong handling at app layer.
 - Reconnect restores latest persisted session state for continuity.
 - Enforce configurable burst/window message limits to protect service.
-**Constraints**:
+  **Constraints**:
 - Preserve modular-monolith boundaries from constitution.
 - Keep protocol and session logic server-side only (no AI inference in backend WS loop).
 - Maintain deterministic JSON error responses for invalid payloads.
-**Scale/Scope**:
+  **Scale/Scope**:
 - Single interview room per `session_id`.
 - Designed for PoC concurrency with guardrails and future horizontal scaling via Redis.
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
 - **Modular Monolith Boundary**: PASS
   - WS logic implemented in backend service modules (`models`, `services`, `routers`) without cross-service coupling.
@@ -86,6 +88,7 @@ backend/
 ## Phase Execution Summary
 
 ### Phase 1: Protocol and Session Service
+
 - Added typed message models in `ws_message.py`.
 - Implemented `WebSocketManager` for:
   - Connection tracking per `session_id`.
@@ -94,12 +97,14 @@ backend/
   - Message handling for `audio_chunk`, `transcript`, `assistant_response`, `ping`.
 
 ### Phase 2: WebSocket Router Integration
+
 - Added `/ws/interview/{session_id}` endpoint.
 - Added JSON parsing + schema validation + structured error envelopes.
 - Connected lifecycle events to manager (`connect`, `handle_message`, `disconnect`).
 - Registered WS router in `main.py`.
 
 ### Phase 3: Verification
+
 - Added integration tests for:
   - Connection acknowledgement.
   - Ping/pong response.
