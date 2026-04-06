@@ -31,7 +31,18 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Architecture boundary preserved as 4-service modular monolith (`frontend`, `backend`,
+  `ai-worker`, `db`) and contract changes are identified.
+- [ ] AI compute responsibilities stay in `ai-worker`; backend orchestration boundaries are
+  explicit.
+- [ ] Realtime design includes WebSocket, 1.5s chunking, VAD, and early TTS behavior.
+- [ ] Stack remains aligned with mandated baseline (Next.js 15, FastAPI, faster-whisper,
+  LangGraph, PostgreSQL + pgvector, Edge-TTS).
+- [ ] Vietnamese-first behavior with English fallback is specified for all user-facing flows.
+- [ ] Performance acceptance criteria include end-to-end latency target < 3s.
+- [ ] Engineering standards are planned (Pydantic v2, type hints, Ruff, Prettier).
+- [ ] Work is mapped to the active Phase Roadmap segment (Phase 0 -> Phase 8).
+- [ ] Workflow prerequisites are satisfied: `/specify` -> `/plan` -> `/tasks` -> `/implement`.
 
 ## Project Structure
 

@@ -95,6 +95,18 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Constitution Alignment Requirements *(mandatory)*
+
+- **CA-001**: Specification MUST state how the feature preserves the 4-service modular monolith
+  boundary (`frontend`, `backend`, `ai-worker`, `db`).
+- **CA-002**: Specification MUST describe realtime behavior, including WebSocket flow,
+  1.5-second chunking, VAD gating, and early TTS strategy.
+- **CA-003**: Specification MUST define Vietnamese-first behavior and English fallback handling.
+- **CA-004**: Specification MUST include measurable latency acceptance criteria for end-to-end
+  interaction, with target < 3s on the primary path.
+- **CA-005**: Specification MUST declare the target roadmap phase (Phase 0 -> Phase 8) and
+  dependencies on earlier phases.
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
@@ -113,6 +125,10 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-005**: [Realtime metric, e.g., "Primary interview turn achieves end-to-end latency below
+  3 seconds at p95 under expected load"]
+- **SC-006**: [Localization metric, e.g., "Vietnamese responses are selected by default and English
+  fallback is successful in 100% of unsupported-language scenarios"]
 
 ## Assumptions
 
