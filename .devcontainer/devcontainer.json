@@ -1,0 +1,21 @@
+{
+  "name": "ai-interview-poc",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "runServices": ["db", "redis", "backend", "ai-worker", "frontend"],
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
