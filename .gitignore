@@ -33,3 +33,6 @@ Thumbs.db
 # Runtime data
 postgres_data/
 redis_data/
+
+# Test artifacts
+backend/test_*.db

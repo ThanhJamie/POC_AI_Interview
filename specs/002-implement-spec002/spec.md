@@ -5,13 +5,13 @@
 **Status**: Draft  
 **Input**: User description: "tiếp tục implement spec002"
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 <!--
   IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
   Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
   you should still have a viable MVP (Minimum Viable Product) that delivers value.
-  
+
   Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
   Think of each story as a standalone slice of functionality that can be:
   - Developed independently
@@ -77,7 +77,7 @@ As an operator, I need backend dependency checks for PostgreSQL and Redis so ser
 - Create interview request misses required fields.
 - Migration runs twice and must remain idempotent where appropriate.
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -90,7 +90,7 @@ As an operator, I need backend dependency checks for PostgreSQL and Redis so ser
 - **FR-007**: Backend MUST verify Redis connectivity through runtime check endpoint.
 - **FR-008**: Entities MUST include timezone-aware timestamps for creation/update tracking.
 
-### Constitution Alignment Requirements *(mandatory)*
+### Constitution Alignment Requirements _(mandatory)_
 
 - **CA-001**: Scope remains within backend and database services, preserving modular monolith boundaries.
 - **CA-002**: AI inference responsibilities remain in ai-worker and are not introduced in this phase.
@@ -98,13 +98,13 @@ As an operator, I need backend dependency checks for PostgreSQL and Redis so ser
 - **CA-004**: Engineering standards follow Pydantic v2 type safety, Ruff, and consistent formatting.
 - **CA-005**: Work is constrained to roadmap Phase 1 and prepares trigger conditions for Phase 2.
 
-### Key Entities *(include if feature involves data)*
+### Key Entities _(include if feature involves data)_
 
 - **Interview**: Interview session root entity with ID, candidate context, status, and timestamps.
 - **Message**: Conversation unit linked to an Interview and role (`candidate`, `assistant`, `system`).
 - **Embedding**: Vector metadata linked to source content and interview scope for retrieval support.
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 

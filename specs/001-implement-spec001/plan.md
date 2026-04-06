@@ -23,7 +23,7 @@ VS Code dev container support, and setup documentation for fast onboarding.
 
 ## Constitution Check
 
-*GATE: Must pass before implementation and re-check after delivery.*
+_GATE: Must pass before implementation and re-check after delivery._
 
 - [x] Architecture boundary preserved as modular monolith (`frontend`, `backend`, `ai-worker`, `db`).
 - [x] AI compute responsibilities stay in `ai-worker`.
@@ -96,5 +96,5 @@ docker-compose.yml
 ## Complexity Tracking
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| None | N/A | N/A |
+| --------- | ---------- | ------------------------------------ |
+| None      | N/A        | N/A                                  |

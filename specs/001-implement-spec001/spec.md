@@ -5,13 +5,13 @@
 **Status**: Draft  
 **Input**: User description: "thực hiện implement spec 001"
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 <!--
   IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
   Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
   you should still have a viable MVP (Minimum Viable Product) that delivers value.
-  
+
   Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
   Think of each story as a standalone slice of functionality that can be:
   - Developed independently
@@ -77,7 +77,7 @@ stack consistently.
 - Missing environment variables in local `.env` file.
 - Dev container opens but required workspace settings are not applied.
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -91,7 +91,7 @@ stack consistently.
 - **FR-007**: Repository MUST include editor settings for Ruff and Prettier.
 - **FR-008**: Repository MUST include setup documentation and GPU validation steps.
 
-### Constitution Alignment Requirements *(mandatory)*
+### Constitution Alignment Requirements _(mandatory)_
 
 - **CA-001**: Architecture MUST preserve primary modular monolith services: frontend, backend,
   ai-worker, and db.
@@ -101,13 +101,13 @@ stack consistently.
 - **CA-004**: Tooling defaults MUST enforce Pydantic v2/type hints/Ruff/Prettier standards.
 - **CA-005**: Workflow order `/specify` -> `/plan` -> `/tasks` -> `/implement` is satisfied.
 
-### Key Entities *(include if feature involves data)*
+### Key Entities _(include if feature involves data)_
 
 - **Service Container**: Represents a runtime component in compose orchestration.
 - **Environment Variable Set**: Represents required runtime configuration values.
 - **Database Bootstrap**: Represents SQL initialization used at first startup.
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 

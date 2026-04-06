@@ -32,7 +32,9 @@ def get_interview(
 ) -> Interview:
     interview = session.get(Interview, interview_id)
     if interview is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Interview not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Interview not found"
+        )
     return interview
 
 
@@ -44,4 +46,5 @@ def list_interviews(
 ) -> InterviewList:
     statement = select(Interview).offset(offset).limit(limit)
     items = session.exec(statement).all()
-    return InterviewList(items=items)
+    mapped_items = [InterviewRead.model_validate(item) for item in items]
+    return InterviewList(items=mapped_items)

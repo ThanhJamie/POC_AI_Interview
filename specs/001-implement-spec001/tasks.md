@@ -6,27 +6,27 @@
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-- [X] T001 Create base folder structure for services and infrastructure files
-- [X] T002 Add Docker Compose with five services and dependency graph
-- [X] T003 [P] Add Dockerfiles for frontend, backend, and ai-worker
+- [x] T001 Create base folder structure for services and infrastructure files
+- [x] T002 Add Docker Compose with five services and dependency graph
+- [x] T003 [P] Add Dockerfiles for frontend, backend, and ai-worker
 
 ## Phase 2: Constitution-Driven Foundations (Blocking)
 
-- [X] T004 Add database bootstrap SQL with pgvector and uuid-ossp extensions
-- [X] T005 [P] Add `.env.example` with required runtime variables
-- [X] T006 [P] Add `scripts/setup-gpu.sh` for GPU runtime checks
-- [X] T007 Add Dev Container and VS Code settings for Ruff and Prettier
+- [x] T004 Add database bootstrap SQL with pgvector and uuid-ossp extensions
+- [x] T005 [P] Add `.env.example` with required runtime variables
+- [x] T006 [P] Add `scripts/setup-gpu.sh` for GPU runtime checks
+- [x] T007 Add Dev Container and VS Code settings for Ruff and Prettier
 
 ## Phase 3: Foundational (Blocking Prerequisites)
 
-- [X] T008 Create backend dependency manifest and minimal app entrypoint
-- [X] T009 Create ai-worker dependency manifest and minimal app entrypoint
-- [X] T010 Create frontend `package.json` placeholder and metadata
+- [x] T008 Create backend dependency manifest and minimal app entrypoint
+- [x] T009 Create ai-worker dependency manifest and minimal app entrypoint
+- [x] T010 Create frontend `package.json` placeholder and metadata
 
 ## Phase 4: Validation and Documentation
 
-- [X] T011 Add README with setup, run, and GPU validation steps
-- [X] T012 Run structural validation for required files and service list
+- [x] T011 Add README with setup, run, and GPU validation steps
+- [x] T012 Run structural validation for required files and service list
 
 ## Dependencies & Execution Order
 

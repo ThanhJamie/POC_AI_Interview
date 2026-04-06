@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from typing import ClassVar
 from uuid import UUID, uuid4
 
 from sqlmodel import Field, SQLModel
 
 
 class Interview(SQLModel, table=True):
-    __tablename__ = "interviews"
+    __tablename__: ClassVar[str] = "interviews"
 
     id: UUID = Field(default_factory=uuid4, primary_key=True, index=True)
     candidate_name: str = Field(index=True, max_length=255)

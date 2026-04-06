@@ -30,15 +30,15 @@ dependency checks, CRUD interview endpoints, and Alembic migration scaffolding.
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
 - [x] Architecture boundary preserved as 4-service modular monolith (`frontend`, `backend`,
-  `ai-worker`, `db`) and contract changes are identified.
+      `ai-worker`, `db`) and contract changes are identified.
 - [x] AI compute responsibilities stay in `ai-worker`; backend orchestration boundaries are
-  explicit.
+      explicit.
 - [x] Realtime design compatibility is preserved for downstream phases.
 - [x] Stack remains aligned with mandated baseline (Next.js 15, FastAPI, faster-whisper,
-  LangGraph, PostgreSQL + pgvector, Edge-TTS).
+      LangGraph, PostgreSQL + pgvector, Edge-TTS).
 - [x] Vietnamese-first behavior with English fallback is preserved for downstream phases.
 - [x] Performance acceptance criteria include baseline dependency checks.
 - [x] Engineering standards are planned (Pydantic v2, type hints, Ruff, Prettier).
@@ -60,6 +60,7 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
+
 <!--
   ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
   for this feature. Delete unused options and expand the chosen structure with
@@ -93,5 +94,5 @@ backend/
 > **Fill ONLY if Constitution Check has violations that must be justified**
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| None | N/A | N/A |
+| --------- | ---------- | ------------------------------------ |
+| None      | N/A        | N/A                                  |
