@@ -1,0 +1,38 @@
+# Node
+node_modules/
+.npm/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build and cache
+build/
+dist/
+coverage/
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE and OS
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.tmp
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+
+# Runtime data
+postgres_data/
+redis_data/
+
+# Test artifacts
+backend/test_*.db

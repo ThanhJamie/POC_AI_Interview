@@ -9,6 +9,15 @@
     "chat.tools.terminal.autoApprove": {
         ".specify/scripts/bash/": true,
         ".specify/scripts/powershell/": true
-    }
+    },
+    "python.defaultInterpreterPath": "/home/thanh/home/thanh/project/ai-interview-poc/.venv/bin/python",
+    "editor.formatOnSave": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.linting.enabled": true,
+    "ruff.enable": true,
+    "ruff.lint.args": [
+        "--fix"
+    ],
+    "prettier.requireConfig": true
 }
 
