@@ -12,6 +12,12 @@ class Settings(BaseSettings):
     )
     redis_url: str = Field(default="redis://redis:6379/0", alias="REDIS_URL")
     sql_echo: bool = Field(default=False, alias="SQL_ECHO")
+    ws_session_ttl_seconds: int = Field(default=3600, alias="WS_SESSION_TTL_SECONDS")
+    ws_rate_limit_max: int = Field(default=20, alias="WS_RATE_LIMIT_MAX")
+    ws_rate_limit_window_seconds: int = Field(
+        default=60,
+        alias="WS_RATE_LIMIT_WINDOW_SECONDS",
+    )
 
 
 settings = Settings()
