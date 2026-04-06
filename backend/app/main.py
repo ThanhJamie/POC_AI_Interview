@@ -7,6 +7,8 @@ from redis import Redis
 from app.config import settings
 from app.database import check_database_connection, init_db
 from app.routers.interview import router as interview_router
+from app.routers.ws.interview import router as ws_interview_router
+
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
@@ -16,6 +18,7 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 
 app = FastAPI(title="AI Interview Backend", version="0.2.0", lifespan=lifespan)
 app.include_router(interview_router)
+app.include_router(ws_interview_router)
 
 
 @app.get("/health")
